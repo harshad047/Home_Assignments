@@ -1,4 +1,4 @@
-package com.tss.model;
+package com.tss.test;
 
 import java.util.Scanner;
 
@@ -93,6 +93,7 @@ public class AccountTest {
 				case 6:
 					System.out.println("Thank you for using the bank app.");
 					loop = false;
+					sc.close();
 					break;
 
 				default:
