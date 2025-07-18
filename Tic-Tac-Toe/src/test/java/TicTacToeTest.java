@@ -39,6 +39,22 @@ public class TicTacToeTest {
         board.placeMark(2, 1, 'O');
         assertTrue(board.checkWin('O'), "Column win not detected");
     }
+    
+    @Test
+    public void testDraw() {
+        board.placeMark(0, 0, 'X');
+        board.placeMark(0, 1, 'O');
+        board.placeMark(0, 2, 'X');
+        board.placeMark(1, 0, 'X');
+        board.placeMark(1, 1, 'O');
+        board.placeMark(1, 2, 'O');
+        board.placeMark(2, 0, 'O');
+        board.placeMark(2, 1, 'X');
+        board.placeMark(2, 2, 'X');
+
+        assertTrue(board.isFull(), "Board should be full");
+        
+    }
 
     @Test
     public void testDiagonalWin() {
